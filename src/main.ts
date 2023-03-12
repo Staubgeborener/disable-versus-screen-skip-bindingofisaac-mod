@@ -1,5 +1,10 @@
 import { ModCallback, RoomType } from "isaac-typescript-definitions";
-import { ISCFeature, upgradeMod } from "isaacscript-common";
+import {
+  game,
+  ISCFeature,
+  ModCallbackCustom,
+  upgradeMod,
+} from "isaacscript-common";
 
 const MOD_NAME = "disable-versus-screen-skip";
 const modVanilla = RegisterMod(MOD_NAME, 1);
@@ -9,22 +14,17 @@ export const mod = upgradeMod(modVanilla, features);
 main();
 
 function main() {
-  mod.AddCallback(ModCallback.POST_UPDATE, () => {
-    const roomData = Game().GetRoom().GetType();
-    if (roomData === RoomType.BOSS) {
-      const frameCount = Game().GetRoom().GetFrameCount();
-      if (frameCount < 1) {
-        mod.disableAllInputs("h34984h0fv");
-      } else {
-        mod.enableAllInputs("h34984h0fv");
-      }
+  mod.AddCallbackCustom(ModCallbackCustom.POST_NEW_ROOM_EARLY, () => {
+    if (game.GetRoom().GetType() === RoomType.BOSS) {
+      mod.disableAllInputs("disable-versus-screen-skip-key-input");
     }
   });
 
-  // Just to check the current frame.
-  mod.AddCallback(ModCallback.POST_RENDER, () => {
-    const frameCountY = Game().GetRoom().GetFrameCount();
-    const frameCountX = `${frameCountY}`;
-    Isaac.RenderText(frameCountX, 50, 50, 0.5, 0.5, 1, 1);
+  mod.AddCallback(ModCallback.POST_UPDATE, () => {
+    if (game.GetRoom().GetType() === RoomType.BOSS) {
+      if (game.GetRoom().GetFrameCount() > 1) {
+        mod.enableAllInputs("disable-versus-screen-skip-key-input");
+      }
+    }
   });
 }
