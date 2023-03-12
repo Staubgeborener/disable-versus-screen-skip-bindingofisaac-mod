@@ -553,6 +553,11 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/recommended/-/recommended-1.0.2.tgz#1e198237225933e319718f082e78366e9f159d71"
   integrity sha512-dbHBtbWBOjq0/otpopAE02NT2Cm05Qe2JsEKeCf/wjSYbI2hz8nCqnpnOJWHATgjDz4fd3dchs3Wy1gQGjfN6w==
 
+"@tsconfig/strictest@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/strictest/-/strictest-1.0.2.tgz#aff98cd714dbd1722c9229eed2dcf3fc6fd30fd9"
+  integrity sha512-IRKlC8cnP7zMz1SDBjyIVyPapkEGWLZ6wkF6Z8T+xU80P9sO5uGXlIUvtzjx+7ehPJRWxkB6CeIDwUfyqNtYkQ==
+
 "@tufjs/models@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@tufjs/models/-/models-1.0.0.tgz#5a5784e8770b7d014b5f87bff35af1f71fdebf1f"
@@ -2743,6 +2748,13 @@ isaacscript-spell@^1.2.39:
   version "1.2.39"
   resolved "https://registry.yarnpkg.com/isaacscript-spell/-/isaacscript-spell-1.2.39.tgz#b8df6eb9937388d1d6032a3ae0eecdd0c7b3f32d"
   integrity sha512-/sdtCpCtMvI+3SIoxUbIcCimHG4/NY33S8HshFPZvdGXfudAtHIWMnCwfwoD+4NOo9sZ1WFn2er2X2G5pq98Qw==
+
+isaacscript-tsconfig@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/isaacscript-tsconfig/-/isaacscript-tsconfig-4.0.0.tgz#34e3befb2cb6b1b813be7135c8828f3228296cd9"
+  integrity sha512-28vpFez7IDwXzNozd4jfQSLDLAWCrVy3Rqcw3Xy5ClEI3XDB+Xxa+ZZfQ7sB0+SpmuChFOtI+KErlISLOP9xpQ==
+  dependencies:
+    "@tsconfig/strictest" "^1.0.2"
 
 isaacscript@^3.6.42:
   version "3.6.42"
