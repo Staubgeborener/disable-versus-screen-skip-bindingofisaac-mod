@@ -1,3 +1,5 @@
+// source code repo: https://tinyurl.com/yckkuh8m
+
 import { ModCallback, RoomType } from "isaac-typescript-definitions";
 import {
   game,
@@ -6,7 +8,7 @@ import {
   upgradeMod,
 } from "isaacscript-common";
 
-const MOD_NAME = "disable-versus-screen-skip";
+const MOD_NAME = "Disable Versus Screen Skip";
 const modVanilla = RegisterMod(MOD_NAME, 1);
 const features = [ISCFeature.DISABLE_INPUTS] as const;
 export const mod = upgradeMod(modVanilla, features);
