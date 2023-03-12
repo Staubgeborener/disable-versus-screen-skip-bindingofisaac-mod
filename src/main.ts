@@ -1,4 +1,4 @@
-import { ModCallback } from "isaac-typescript-definitions";
+import { ModCallback, RoomType } from "isaac-typescript-definitions";
 import { ISCFeature, upgradeMod } from "isaacscript-common";
 
 const MOD_NAME = "disable-versus-screen-skip";
@@ -9,20 +9,26 @@ export const mod = upgradeMod(modVanilla, features);
 main();
 
 function main() {
-  // Instantiate a new mod object, which grants the ability to add callback functions that
-  // correspond to in-game events.
-
-  // Register a callback function that corresponds to when a new run is started.
-  mod.AddCallback(ModCallback.POST_GAME_STARTED, postGameStarted);
-
-  // Print a message to the "log.txt" file.
-  Isaac.DebugString(`${MOD_NAME} initialized.`);
-
   mod.AddCallback(ModCallback.POST_UPDATE, () => {
-    disableAllInputs();
+    let roomData = Game().GetRoom().GetType();
+    if (roomData === RoomType.BOSS) {
+      let frameCount = Game().GetRoom().GetFrameCount();
+      if (frameCount < 1) {
+        mod.disableAllInputs("h34984h0fv");
+      } else {
+        mod.enableAllInputs("h34984h0fv");
+      }
+    }
   });
-}
 
-function postGameStarted() {
-  Isaac.DebugString("Callback fired: POST_GAME_STARTED");
+  function postGameStarted() {
+    Isaac.DebugString("Callback fired: POST_GAME_STARTED");
+  }
+
+  // just to check the current frame
+  mod.AddCallback(ModCallback.POST_RENDER, () => {
+    let frameCountY = Game().GetRoom().GetFrameCount();
+    let frameCountX = `${frameCountY}`;
+    Isaac.RenderText(frameCountX, 50, 50, 0.5, 0.5, 1, 1);
+  });
 }
