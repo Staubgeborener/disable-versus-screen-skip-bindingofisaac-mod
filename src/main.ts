@@ -8,7 +8,7 @@ import {
   upgradeMod,
 } from "isaacscript-common";
 
-const MOD_NAME = "Disable Versus Screen Skip";
+const MOD_NAME = "disable-versus-screen-skip";
 const modVanilla = RegisterMod(MOD_NAME, 1);
 const features = [ISCFeature.DISABLE_INPUTS] as const;
 export const mod = upgradeMod(modVanilla, features);
