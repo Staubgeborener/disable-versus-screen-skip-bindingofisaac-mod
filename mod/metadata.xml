@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <metadata>
-    <name>Disable Versus Screen Skip</name>
-    <directory>disable-versus-screen-skip</directory>
-    <id>2946154571</id>
-    <description>So you have a cool mod installed that edits the versus screen? Something like [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2784425808]Who's That Isaac Boss ?[/url] or [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2899871095]Subnames Simple[/url]? And then in complete joy of examining this new wonderful portraits your muscle memory intervenes and you skip everything with a press of the space or enter key and find yourself in the boss fight?
+  <name>Disable Versus Screen Skip</name>
+  <directory>disable-versus-screen-skip</directory>
+  <id>2946154571</id>
+  <description>
+    So you have a cool mod installed that edits the versus screen? Something like [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2784425808]Who's That Isaac Boss ?[/url] or [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2899871095]Subnames Simple[/url]? And then in complete joy of examining this new wonderful portraits your muscle memory intervenes and you skip everything with a press of the space or enter key and find yourself in the boss fight?
 
 Do not despair longer! This mod disables the space and enter key in the versus screen, so you can enjoy those other versus screen mods to the fullest without your muscle memory hitting the keyboard and thus skips everything.
 
 Made with ♥ using the [url=https://github.com/IsaacScript/isaacscript]IsaacScript framework[/url]
-[url=https://github.com/Staubgeborener/disable-versus-screen-skip-bindingofisaac-mod]Source code[/url]</description>
-    <version>1.5</version>
-    <visibility>Public</visibility>
-    <tag id="Tweaks"/>
-    <tag id="Removals"/>
+[url=https://github.com/Staubgeborener/disable-versus-screen-skip-bindingofisaac-mod]Source code[/url]
+  </description>
+  <version>1.5</version>
+  <visibility>Public</visibility>
+  <tag id="Tweaks" />
+  <tag id="Removals" />
 </metadata>
