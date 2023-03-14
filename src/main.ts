@@ -1,5 +1,3 @@
-// source code repo: https://tinyurl.com/yckkuh8m
-
 import { ModCallback, RoomType } from "isaac-typescript-definitions";
 import {
   game,
