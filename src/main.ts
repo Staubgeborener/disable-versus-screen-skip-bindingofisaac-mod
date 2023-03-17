@@ -23,10 +23,11 @@ function main() {
 
   // Enable skip buttons
   mod.AddCallback(ModCallback.POST_UPDATE, () => {
-    if (game.GetRoom().GetType() === RoomType.BOSS) {
-      if (game.GetRoom().GetFrameCount() > 1) {
-        mod.enableAllInputs("disable-versus-screen-skip-key-input");
-      }
+    if (
+      game.GetRoom().GetType() === RoomType.BOSS &&
+      game.GetRoom().GetFrameCount() > 0
+    ) {
+      mod.enableAllInputs("disable-versus-screen-skip-key-input");
     }
   });
 }
